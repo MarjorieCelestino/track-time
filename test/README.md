@@ -126,3 +126,14 @@ _**Expected outcome:**_
 _**Expected outcome:**_ 
 * You should get the tasks `Task002`, `Task 006` and `Task011` as a result
 
+*Test 014 - Responsiveness*
+---------
+* With the home page open _(`index.php` file)_
+* Click the minimize button at your web browser window
+* Navigate through the application freely
+
+_**Expected outcome:**_ 
+* The navigation menu should be replaced by a menu icon at the top-left og the page
+* All the elements of the page should be resized to fit the page width and height
+* All functionalities should work as expected
+
