@@ -29,10 +29,10 @@ _**Expected outcome:**_
 
 _**Expected outcome:**_ 
 * A form should open with the following mandatory fields
- * Name
- * Date - with today's date value
- * Time
- * Description
+  * Name
+  * Date - with today's date value
+  * Time
+  * Description
  
  *Test 005 - Open form with time paused*
 ---------
@@ -41,10 +41,10 @@ _**Expected outcome:**_
 
 _**Expected outcome:**_ 
 * A form should open with the following mandatory fields
- * Name
- * Date - with today's date value
- * Time - with paused time value
- * Description
+  * Name
+  * Date - with today's date value
+  * Time - with paused time value
+  * Description
  
  *Test 006 - Open form with time resumed*
 ---------
@@ -53,10 +53,10 @@ _**Expected outcome:**_
 
 _**Expected outcome:**_ 
 * A form should open with the following mandatory fields
- * Name
- * Date - with today's date value
- * Time - with time value of when the clock was resumed
- * Description
+  * Name
+  * Date - with today's date value
+  * Time - with time value of when the clock was resumed
+  * Description
  
  *Test 007 - Time field update when paused*
 ---------
@@ -86,13 +86,13 @@ _**Expected outcome:**_
 * Click the `book` button
 
 _**Expected outcome:**_ 
-* You should get a message informing you that the blank field is mandatory
+* You should get a message informing you that the blank field is mandatory _(all fields are mandatory)_
 
 *Test 010 - Book new task*
 ---------
 * At the home page _(`index.php` file)_, with clock running, click the pause button
 * Click the `+` button _(Book time)_
-* Fill in the form fields
+* Fill in all form fields
 * Click the `book` button
 
 _**Expected outcome:**_ 
@@ -103,9 +103,9 @@ _**Expected outcome:**_
 ---------
 * At the home page _(`index.php` file)_, with clock running, click the pause button
 * Click the `+` button _(Book time)_
-* Fill in the form fields
+* Fill in all form fields
 * Click the `book` button
-* Go to the tasks page _(`tasks.php` file, or `Tasks` iten at the navigation bar)_
+* Go to the tasks page _(`tasks.php` file, or `Tasks` item at the navigation bar)_
 
 _**Expected outcome:**_ 
 * You should see the new added task at the top of the page
@@ -122,6 +122,7 @@ _**Expected outcome:**_
 ---------
 * At the tasks  page  _(`tasks.php` file, or `Tasks` item at the navigation bar)_
 * Search for the word _avocado_ through the search bar at the top of the page
+  * _Search is case insensitive_
 
 _**Expected outcome:**_ 
 * You should get the tasks `Task002`, `Task 006` and `Task011` as a result
