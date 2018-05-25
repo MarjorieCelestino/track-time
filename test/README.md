@@ -1,40 +1,128 @@
-# Track Time
+# Tests
+ 
 
-Time tracking application 
-
-*Characteristics*
+*Test 001 - Start time*
 ---------
-* Start a tracker that counts the spent time with single click
-* Pause and resume time
-* Book time for tasks with: name, description, date and time of he tracking
-* Overview for all tracked times with pagination
-* Search functionality that searches/filters all descriptions of every tracked time
-* Responsive to screen size
+* At the home page _(`index.php` file)_, click the start button
 
-*Technologies*
+_**Expected outcome:**_ 
+* Clock should start tracking time in the _HH:mm:ss_ format
+
+*Test 002 - Pause time*
 ---------
-* Front end - HTML, Javascript, CSS
-* Back end - PHP
-* Database - MySQL
+* At the home page _(`index.php` file)_, with clock running, click the pause button
 
-_**Note:** No frameworkeds where used_
+_**Expected outcome:**_
+* Clock should stop tracking time and maintain the paused time in the _HH:mm:ss_ format
 
-*Reminders*
--------------
-To work with this project or run it locally, you need to:
+*Test 003 - Resume time*
+---------
+* At the home page _(`index.php` file)_, with clock running, click the resume button
 
-* Verify that you have a local server environment to run all PHP files _(suggestion `MAMP`)_
-  * Once your server is running, you can run files through the following path
-    * _`http://localhost:[port-number]/track-time/[folder]/[file.php]`_
-* Make sure you create a database _(name suggestion `time_tracker`)_
-* Change database information at the following files _(found at the `db` folder)_:
-  * `db_connect.php`
-  * `create_table.php` -  run this file to create the new table at your db
-  * `seeder.php` -  run this file to populate the new table
-* To check if everything is working fine you can follow the test suggestions _(found at the `test` folder)_
+_**Expected outcome:**_ 
+* Clock should stop tracking time and resume to 00:00:00
 
+*Test 004 - Open form with time 0*
+---------
+* At the home page _(`index.php` file)_, with time at 00:00:00
+* Click the `+` button _(Book time)_
 
-Bug tracker
------------
+_**Expected outcome:**_ 
+* A form should open with the following mandatory fields
+ * Name
+ * Date - with today's date value
+ * Time
+ * Description
+ 
+ *Test 005 - Open form with time paused*
+---------
+* At the home page _(`index.php` file)_, with clock running, click the pause button
+* Click the `+` button _(Book time)_
 
-[Issues - MarjorieCelestino/track-time](https://github.com/MarjorieCelestino/track-time/issues)
+_**Expected outcome:**_ 
+* A form should open with the following mandatory fields
+ * Name
+ * Date - with today's date value
+ * Time - with paused time value
+ * Description
+ 
+ *Test 006 - Open form with time resumed*
+---------
+* At the home page _(`index.php` file)_, with clock running, click the resume button
+* Click the `+` button _(Book time)_
+
+_**Expected outcome:**_ 
+* A form should open with the following mandatory fields
+ * Name
+ * Date - with today's date value
+ * Time - with time value of when the clock was resumed
+ * Description
+ 
+ *Test 007 - Time field update when paused*
+---------
+* At the home page _(`index.php` file)_, with time at 00:00:00
+* Click the `+` button _(Book time)_
+* Click the sart time button
+* Clck the pause button
+
+_**Expected outcome:**_ 
+* The form time field should be updated with the current paused time
+
+ *Test 008 - Time field update when resumed*
+---------
+* At the home page _(`index.php` file)_, with time at 00:00:00
+* Click the `+` button _(Book time)_
+* Click the sart time button
+* Clck the resume button
+
+_**Expected outcome:**_ 
+* The form time field should be updated with time value of when the clock was resumed
+
+*Test 009 - Book new task blank field*
+---------
+* At the home page _(`index.php` file)_, with clock running, click the pause button
+* Click the `+` button _(Book time)_
+* Fill in the form fields, leave one blank
+* Click the `book` button
+
+_**Expected outcome:**_ 
+* You should get a message informing you that the blank field is mandatory
+
+*Test 010 - Book new task*
+---------
+* At the home page _(`index.php` file)_, with clock running, click the pause button
+* Click the `+` button _(Book time)_
+* Fill in the form fields
+* Click the `book` button
+
+_**Expected outcome:**_ 
+* You should get the following message
+ * _Task [task name] booked successfully_
+ 
+ *Test 011 - Overview of tasks by newest*
+---------
+* At the home page _(`index.php` file)_, with clock running, click the pause button
+* Click the `+` button _(Book time)_
+* Fill in the form fields
+* Click the `book` button
+* Go to the tasks page _(`tasks.php` file, or `Tasks` iten at the navigation bar)_
+
+_**Expected outcome:**_ 
+* You should see the new added task at the top of the page
+
+*Test 012 - Tasks pagination*
+---------
+* At the tasks  page  _(`tasks.php` file, or `Tasks` item at the navigation bar)_
+* Navigate through the pages found at the end of page
+
+_**Expected outcome:**_ 
+* You should see maximum of 5 tasks per page
+
+*Test 013 - Search*
+---------
+* At the tasks  page  _(`tasks.php` file, or `Tasks` item at the navigation bar)_
+* Search for the word _avocado_ through the search bar at the top of the page
+
+_**Expected outcome:**_ 
+* You should get the tasks `Task002`, `Task 006` and `Task011` as a result
+
