@@ -1,5 +1,5 @@
 <?php  
-
+    //Sample data
 	$tasks = array (
 
             array (
@@ -106,6 +106,7 @@
         } else {
             echo 'Connected' . '<br><br>';
 
+            //Insert sample data into table
             foreach ($tasks as $task) {
                 
                 $name = $task['name'];

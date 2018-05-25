@@ -5,23 +5,23 @@
 			<h1 id="clock"><time>00:00:00</time></h1>
 		</div>
 		<div class="time-actions">
-			<a id="start" href="#start" onclick="startClock(); hideFeedback();">
+			<a id="start" href="#start" onclick="startClock(); hide('feedback');">
 				<img class="icons" src="images/play.png" alt="start">
 			</a>
-			<a id="pause" href="#pause" onclick="pauseClock(); hideFeedback();">
+			<a id="pause" href="#pause" onclick="pauseClock(); hide('feedback');">
 				<img class="icons" src="images/pause.png" alt="pause">
 			</a>
-			<a id="stop" href="#resume" onclick="clearClock(); hideFeedback();">
+			<a id="stop" href="#resume" onclick="clearClock(); hide('feedback');">
 				<img class="icons" src="images/resume.png" alt="resume">
 			</a>
-			<a href="#new-task" onclick="displayForm(); hideFeedback();">
+			<a href="#new-task" onclick="display('add-task-form'); hide('feedback');">
 				<img class="icons" src="images/add.png" alt="new-task" title="Book time">
 			</a>	
 		</div>
 
 		<div id="add-task-form" class="form-new-task" style="display:none;">
 			<?php 
-
+				//get current date
 				$today = date("Y-m-d");
 
 			?>
@@ -30,7 +30,7 @@
 				<input type="date" name="date" placeholder="mm/dd/aaaa" value="<?php echo $today; ?>" required>
 				<input id="time" type="text" name="time" placeholder="hh:mm:ss" value="" maxlength="8" required>
 				<textarea type="text" name="description"  placeholder="..." maxlength="500" required></textarea>
-				<input type="submit" name="submit" value="book" onclick="resetTime(); displayFeedback();" />
+				<input type="submit" name="submit" value="book" onclick="resetTime(); display('feedback');" />
 			</form>
 		</div>
 		<div id="feedback" class="feedback" style="display:block;">
@@ -45,6 +45,7 @@
 	                return $input;
 	            }
 
+	            //get input data
 				if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 					$name = $_POST['name'];
@@ -59,7 +60,7 @@
 
 					echo $date;
 
-					//Insert data to DB
+					//insert data into DB
 				    if ($db_connect->connect_error) {
 				        echo 'Error: ' . $db_connect->connect_error;
 				    } else {
@@ -73,6 +74,7 @@
 		                }else{
 
 		                    echo "<p>Unable to book the task <span>" . $name . "</span></p>";
+		                    //uncomment to get error message
 		                    //echo mysqli_error($db_connect) . "<br><br>";
 		                }
 				    }

@@ -16,7 +16,7 @@
 	<body>
 
 		<?php 
-			//DB Connection 
+			//Require db connection 
 			require_once('db/db_connect.php');
 		?>
 

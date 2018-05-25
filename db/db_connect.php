@@ -8,5 +8,4 @@
 
     $db_connect = new mysqli($server,$user,$password,$db_name,$port);
     mysqli_set_charset($db_connect,"utf8");
-
 ?>

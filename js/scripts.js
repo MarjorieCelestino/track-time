@@ -1,3 +1,6 @@
+/*
+   Menu functions ================================================================================
+*/
 function openNav(){
 
 	var navDiv = document.getElementById("navigation");
@@ -14,20 +17,15 @@ function openNav(){
 	}
 }
 
-function displayForm(){
-	document.getElementById("add-task-form").style.display = "block";
+/*
+   Form functions ================================================================================
+*/
+function display(id){
+	document.getElementById(id).style.display = "block";
 }
 
-function displayFeedback(){
-	document.getElementById("feedback").style.display = "block";
-}
-
-function hideFeedback(){
-	document.getElementById("feedback").style.display = "none";
-}
-
-function setPageActive() {
-
+function hide(id){
+	document.getElementById(id).style.display = "none";
 }
 
 /*
@@ -67,12 +65,10 @@ function timer() {
     t = setTimeout(addTime, 1000);
 }
 
-/* start clock */
 function startClock(){
 	timer();
 }
 
-/* clear clock */
 function clearClock() {
 
 	/* set value of time input */
@@ -89,7 +85,6 @@ function resetTime(){
     seconds = 0; minutes = 0; hours = 0;
 }
 
-/* pause clock */
 function pauseClock() {
 
     clearTimeout(t);

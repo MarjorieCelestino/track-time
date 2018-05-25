@@ -62,7 +62,7 @@
 						}
         ?>
 
-            			<div class="row">
+						<div class="row">
 						  <div class="column left">
 						    <img src="images/task.png">
 						  </div>
@@ -76,7 +76,6 @@
 						    <p><?php echo $row['end_time'] ?></p>
 						  </div>
 						</div>
-
 
         <?php	
             		}
@@ -93,7 +92,7 @@
 		  				<a class="page" href="tasks.php">&laquo;</a>
 
         <?php
-        		//defines number of pages
+        		//define number of pages and create page icons
         		$total_pages = ceil($total_itens / $limit);
 
         		for ($i=1; $i<=$total_pages; $i++) {
