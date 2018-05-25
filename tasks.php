@@ -56,7 +56,7 @@
 
             			//searches description
             			if($search !== null && $search !== ""){
-							if(strpos($row['description'], $search) === false){
+							if(strpos(strtolower($row['description']), $search) === false){
 								continue;
 							}
 						}
