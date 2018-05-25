@@ -5,16 +5,16 @@
 			<h1 id="clock"><time>00:00:00</time></h1>
 		</div>
 		<div class="time-actions">
-			<a id="start" href="#" onclick="startClock(); hideFeedback();">
+			<a id="start" href="#start" onclick="startClock(); hideFeedback();">
 				<img class="icons" src="images/play.png" alt="start">
 			</a>
-			<a id="pause" href="#" onclick="pauseClock(); hideFeedback();">
+			<a id="pause" href="#pause" onclick="pauseClock(); hideFeedback();">
 				<img class="icons" src="images/pause.png" alt="pause">
 			</a>
-			<a id="stop" href="#" onclick="clearClock(); hideFeedback();">
+			<a id="stop" href="#resume" onclick="clearClock(); hideFeedback();">
 				<img class="icons" src="images/resume.png" alt="resume">
 			</a>
-			<a href="#" onclick="displayForm(); hideFeedback();">
+			<a href="#new-task" onclick="displayForm(); hideFeedback();">
 				<img class="icons" src="images/add.png" alt="new-task" title="Book time">
 			</a>	
 		</div>
@@ -25,7 +25,7 @@
 				$today = date("Y-m-d");
 
 			?>
-			<form action="#" method="post">
+			<form action="#task-created" method="post">
 				<input type="text" name="name" placeholder="Name" maxlength="100" required>
 				<input type="date" name="date" placeholder="mm/dd/aaaa" value="<?php echo $today; ?>" required>
 				<input id="time" type="text" name="time" placeholder="hh:mm:ss" value="" maxlength="8" required>

@@ -13,7 +13,7 @@
                 'name' => 'Task 002',
                 'date' => '2018-05-22',
                 'time' => '00:10:08',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sodales justo eu mauris tincidunt, id dignissim magna elementum. Sed euismod efficitur tortor eu facilisis. Proin augue nunc, luctus hendrerit velit sit amet, iaculis porta velit. In vulputate tristique urna.'
+                'description' => 'Test'
             ),
 
             array (
@@ -41,14 +41,14 @@
                 'name' => 'Task 006',
                 'date' => '2018-05-23',
                 'time' => '00:00:50',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sodales justo eu mauris tincidunt, id dignissim magna elementum. Sed euismod efficitur tortor eu facilisis.'
+                'description' => 'Test'
             ),
 
             array (
                 'name' => 'Task 007',
                 'date' => '2018-05-23',
                 'time' => '00:08:08',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sodales justo eu mauris tincidunt, id dignissim magna elementum. Sed euismod efficitur tortor eu facilisis. Proin augue nunc, luctus hendrerit velit sit amet, iaculis porta velit. In vulputate tristique urna. Praesent tempus ipsum augue, sit amet tristique lacus semper cursus.'
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sodales justo eu mauris tincidunt, id dignissim magna elementum. Sed euismod efficitur tortor eu facilisis.'
             ),
 
             array (
@@ -76,7 +76,7 @@
                 'name' => 'Task 011',
                 'date' => '2018-05-25',
                 'time' => '00:00:08',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                'description' => 'Test'
             ),
 
             array (
