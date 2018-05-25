@@ -133,7 +133,7 @@ _**Expected outcome:**_
 * Navigate through the application freely
 
 _**Expected outcome:**_ 
-* The navigation menu should be replaced by a menu icon at the top-left og the page
+* The navigation menu should be replaced by a menu icon at the top-left of the page
 * All the elements of the page should be resized to fit the page width and height
 * All functionalities should work as expected
 
