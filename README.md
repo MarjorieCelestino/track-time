@@ -24,6 +24,7 @@ _**Note:** No frameworks where used_
 To work with this project or run it locally, you need to:
 
 * Verify that you have a local server environment to run all PHP files _(suggestion `MAMP`)_
+  * The project should be inside the `Document root` of your web server _(usually `htdocs` folder)_
   * Once your server is running, you can run files through the following path
     * _`http://localhost:[port-number]/track-time/[folder]/[file.php]`_
 * Make sure you create a database _(name suggestion `time_tracker`)_
